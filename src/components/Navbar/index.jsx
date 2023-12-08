@@ -53,7 +53,7 @@ const MobileIcon = styled.div`
   @media screen and (max-width: 800px) {
     display: block;
     position: absolute;
-    top: 0;
+    top: 10px;
     right: 0;
     transform: translate(-100%, 50%);
     font-size: 1.5rem;
@@ -200,6 +200,7 @@ const MobileMenuButton = styled.a`
 const MobileLink = styled.a`
   // border: 1px solid black;
   border-bottom: 1px solid ${({ theme }) => theme.card};
+  padding-bottom: 14px;
   display: flex;
   align-items: center;
   gap: 8px;

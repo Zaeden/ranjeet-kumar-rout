@@ -4,6 +4,7 @@ import Typewriter from "typewriter-effect";
 import HeroImg from "../../assets/images/hero-image.png";
 import HeroBgAnimation from "../HeroBgAnimation";
 import {info} from "../../data/constants.js";
+import ranjeetcv from "../../assets/pdfs/CV_Ranjeet.pdf";
 
 const HeroContainer = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -248,7 +249,7 @@ const Hero = () => {
             <SubTitle>
               {info.bio}
             </SubTitle>
-            <ResumeButton href="" target="_blank">
+            <ResumeButton href={ranjeetcv} target="_blank">
               Check Resume
             </ResumeButton>
           </HeroLeftContainer>
