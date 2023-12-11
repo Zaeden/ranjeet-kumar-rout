@@ -124,3 +124,34 @@ export const experiences = [
   //   doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/WhatsApp%20Image%202023-05-05%20at%2012.07.39%20AM.jpeg?alt=media&token=9f0e1648-568b-422d-bd0b-1f125f722245",
   // },
 ];
+
+
+export const education = [
+  {
+    id: 0,
+    img: "https://upload.wikimedia.org/wikipedia/en/thumb/a/ac/IIEST_Shibpur_Logo.svg/220px-IIEST_Shibpur_Logo.svg.png",
+    school: "Indian Institute of Engineering Science and Technology, Shibpur, Howrah, West Bengal",
+    date: "2018",
+    grade: "8.71 CGPA",
+    desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering at Kalinga Institute of Industrial Technology, Bhubaneswar. I have completed 4 semesters and have a CGPA of 8.71. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others. I am also a member of the Google Developers Student Club (GDSC) at KIIT, where I am learning and working on exciting projects with a team of talented developers.",
+    degree: "Ph.D(Computer Science and Engineering)",
+  },
+  {
+    id: 1,
+    img: "https://www.bput.ac.in/images/bput-logo.png",
+    school: "Biju Patnaik University of Technology, Rourkela, Orissa",
+    date: "2010",
+    grade: "8.62",
+    desc: "I completed my class 12 high school education at Methodist School, Dankuni, where I studied Science with Computer Science.",
+    degree: "M.Tech Computer Science & Engineering",
+  },
+  {
+    id: 2,
+    img: "https://www.bput.ac.in/images/bput-logo.png",
+    school: "Biju Patnaik University of Technology, Rourkela, Orissa",
+    date: "2005",
+    grade: "73%",
+    desc: "I completed my class 10 education at Methodist School, Dankuni, where I studied Science with Computer Application.",
+    degree: "B.Tech Computer Science & Engineering",
+  },
+];
