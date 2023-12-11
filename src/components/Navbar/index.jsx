@@ -248,7 +248,7 @@ const Navbar = () => {
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
           <NavLink href="#experience">Experience</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
+          <NavLink href="#work">My Work</NavLink>
           <NavLink href="#education">Education</NavLink>
         </NavItems>
         <ButtonContainer>
@@ -282,12 +282,12 @@ const Navbar = () => {
             <IoMdBriefcase /> Experience
           </MobileLink>
           <MobileLink
-            href="#projects"
+            href="#work"
             onClick={() => {
               setOpen(!open);
             }}
           >
-            <AiFillProfile /> Projects
+            <AiFillProfile /> My Work
           </MobileLink>
           <MobileLink
             href="#education"
