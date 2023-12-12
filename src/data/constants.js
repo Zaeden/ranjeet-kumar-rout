@@ -543,3 +543,53 @@ export const publications = [
       "R. K. Rout, J. K. Das, and P Pal Choudhury, Determination of network interactions in Gene regulatory networks: using interaction graph and Boolean functions.(Presented in International Symposium - Complex Dynamical Systems and Applications (11th Mar 2014) (Indian Statistical Institute (ISI) Kolkata))., APR, 2014",
   },
 ];
+
+export const books = [
+  {
+    id: 0,
+    category: "book",
+    title: "Artificial Intelligence Technologies for Computational Biology",
+    publisher: "CRC Press( Taylor & Francis)",
+    author:
+      "Ranjeet Kumar Rout, Saiyed Umer, Sabha Sheikh and Amrit Lal Sangal",
+    url: "https://www.routledge.com/Artificial-Intelligence-Technologies-for-Computational-Biology/Rout-Umer-Sheikh-Sangal/p/book/9781032160009",
+    cover_url:
+      "https://images.routledge.com/common/jackets/crclarge/978103216/9781032160009.jpg",
+  },
+  {
+    id: 1,
+    category: "book",
+    title:
+      "Advancement of Deep Learning and its Applications in Object Detection and Recognition",
+    publisher: "River Publishers Group",
+    author:
+      "Roohie Naaz Mir, Vipul Kumar Sharma, Ranjeet Kumar Rout, Saiyed Umer",
+    url: "https://www.routledge.com/Advancement-of-Deep-Learning-and-its-Applications-in-Object-Detection-and/Mir-Sharma-Rout-Umer/p/book/9788770227025",
+    cover_url:
+      "https://images.routledge.com/common/jackets/crclarge/978877022/9788770227025.jpg",
+  },
+];
+
+export const patents = [
+  {
+    id: 0,
+    category: "patents",
+    title: "Implementation of facial emotion recognition system using deep neural network approaches and its application thereof",
+    author: "Ranjeet Kumar Rout, Saiyed Umer, and Amrit Lal Sangal",
+    application_no: 202111012711
+  },
+  {
+    id: 1,
+    category: "patents",
+    title: "Implementation of Affine Boolean Function for 16 Queen Problem and Its Application Thereof",
+    author: "Ranjeet Kumar Rout, Saiyed Umer, Sabha Sheikh, Harveeer Singh Pali And Ratikanta Sahoo",
+    application_no: 202111035066
+  },
+  {
+    id: 2,
+    category: "patents",
+    title: "Systems and Methods for facilitating Biometric Recognition",
+    author: "A. Sardar, S. Umer, R. K. Rout and M. K. Khan",
+    application_no: 18096206
+  },
+];

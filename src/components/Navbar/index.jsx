@@ -43,14 +43,17 @@ const NavLogo = styled(LinkR)`
   cursor: pointer;
   text-decoration: none;
   align-items: center;
-  @media screem and (max-width: 640px) {
+  @media screen and (max-width: 1160px) {
+    width: 70%;
+  }
+  @media screen and (max-width: 640px) {
     padding: 0 0px;
   }
 `;
 
 const MobileIcon = styled.div`
   display: none;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 960px) {
     display: block;
     position: absolute;
     top: 10px;
@@ -70,7 +73,7 @@ const NavItems = styled.ul`
   gap: 32px;
   list-style: none;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 960px) {
     display: none;
   }
 `;
@@ -90,11 +93,13 @@ const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: end;
-  width: 80%;
+  width: 50%;
   height: 100%;
   padding: 0 6px;
-
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 1104px) {
+    width: 40%;
+  }
+  @media screen and (max-width: 960px) {
     display: none;
   }
 `;

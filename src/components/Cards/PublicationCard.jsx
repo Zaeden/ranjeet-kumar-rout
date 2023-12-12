@@ -28,7 +28,7 @@ const Card = styled.div`
   transition: all 0.5s ease-in-out;
   &:hover {
     transform: translateY(-5px);
-    box-shadow: rgba(23, 92, 230, 0.40) 0px 4px 24px;
+    box-shadow: rgba(23, 92, 230, 0.4) 0px 4px 24px;
     filter: brightness(1.1);
   }
   &:hover ${Button} {
@@ -64,6 +64,25 @@ const Title = styled.div`
   text-overflow: ellipsis;
 `;
 
+const Logo = styled.div`
+  height: 50px;
+  width: 50px;
+  background-color: ${({ theme }) => theme.primary + 50};
+  
+  border-radius: 10px;
+  margin-top: 4px;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  @media only screen and (max-width: 768px) {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 30px;
+
+  }
+`;
+
 const Description = styled.div`
   font-weight: 400;
   color: ${({ theme }) => theme.text_secondary};
@@ -71,9 +90,9 @@ const Description = styled.div`
   margin-top: 8px;
   display: -webkit-box;
   max-width: 100%;
-//   -webkit-line-clamp: 3;
+  //   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-//   text-overflow: ellipsis;
+  //   text-overflow: ellipsis;
 `;
 
 const PublicationCard = ({ publication }) => {
@@ -81,7 +100,7 @@ const PublicationCard = ({ publication }) => {
     <Card>
       {/* <Image src={publication.image}/> */}
       <Details>
-        <Title>A</Title>
+        <Logo>{publication.id+1}</Logo>
         <Description>{publication.description}</Description>
       </Details>
     </Card>

@@ -4,8 +4,8 @@ import { publications } from "../../data/constants.js";
 import PublicationCard from "../Cards/PublicationCard.jsx";
 import { FaCircleArrowLeft } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-
-console.log(publications);
+import NavbarSecond from "../NavbarSecond/index.jsx";
+import FooterSecond from "../FooterSecond/index.jsx";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -14,10 +14,24 @@ const Container = styled.div`
   justify-content: start;
   position: relative;
   z-index: 1;
+  border-radius: 20px;
   align-items: center;
   // margin-top: 100px;
   margin: 40px 0;
   padding: 8px;
+  background: linear-gradient(
+      38.73deg,
+      rgba(204, 0, 187, 0.15) 0%,
+      rgba(201, 32, 184, 0) 50%
+    ),
+    linear-gradient(
+      141.27deg,
+      rgba(0, 70, 209, 0) 50%,
+      rgba(0, 70, 209, 0.15) 100%
+    );
+  @media screen and (max-width: 760px) {
+    margin: 10px 0;
+  }
 `;
 
 const BackButton = styled.button`
@@ -47,6 +61,12 @@ const BackButton = styled.button`
   }
 `;
 
+const Span = styled.span`
+  @media screen and (max-width: 760px) {
+    display: none;
+  }
+`;
+
 const Wrapper = styled.div`
   // border: 1px solid black;
   max-width: 1100px;
@@ -71,7 +91,7 @@ const Title = styled.h1`
   color: ${({ theme }) => theme.text_primary};
 
   @media (max-width: 760px) {
-    margin-top: 12px;
+    margin-top: 50px;
     font-size: 32px;
   }
 `;
@@ -135,86 +155,93 @@ const PublicationContainer = styled.div`
 const Publication = () => {
   const [toggle, setToggle] = useState("all");
   return (
-    <Container id="skills">
-      <Wrapper>
-        <Link to="/">
-          <BackButton>
-            <FaCircleArrowLeft style={{ fontSize: "32px" }} /> Back to Home
-          </BackButton>
-        </Link>
-        <Title>Publications</Title>
-        <Desc>
-          Here are some of my publicaations for the past couple of year.
-        </Desc>
-        <ToggleButtonGroup>
-          {toggle === "all" ? (
-            <ToggleButton active value="all" onClick={() => setToggle("all")}>
-              All
-            </ToggleButton>
-          ) : (
-            <ToggleButton value="all" onClick={() => setToggle("all")}>
-              All
-            </ToggleButton>
-          )}
-          <Divider />
+    <>
+      <NavbarSecond />
+      <Container id="skills">
+        <Wrapper>
+          <Link to="/">
+            <BackButton>
+              <FaCircleArrowLeft style={{ fontSize: "32px" }} />
+              <Span>Back to Home</Span>
+            </BackButton>
+          </Link>
+          <Title>Publications</Title>
+          <Desc>
+            Here are some of my publications in the past couple of years.
+          </Desc>
+          <ToggleButtonGroup>
+            {toggle === "all" ? (
+              <ToggleButton active value="all" onClick={() => setToggle("all")}>
+                All
+              </ToggleButton>
+            ) : (
+              <ToggleButton value="all" onClick={() => setToggle("all")}>
+                All
+              </ToggleButton>
+            )}
+            <Divider />
 
-          {toggle === "journal" ? (
-            <ToggleButton
-              active
-              value="journal"
-              onClick={() => setToggle("journal")}
-            >
-              JOURNAL
-            </ToggleButton>
-          ) : (
-            <ToggleButton value="journal" onClick={() => setToggle("journal")}>
-              JOURNAL
-            </ToggleButton>
-          )}
-          <Divider />
+            {toggle === "journal" ? (
+              <ToggleButton
+                active
+                value="journal"
+                onClick={() => setToggle("journal")}
+              >
+                JOURNAL
+              </ToggleButton>
+            ) : (
+              <ToggleButton
+                value="journal"
+                onClick={() => setToggle("journal")}
+              >
+                JOURNAL
+              </ToggleButton>
+            )}
+            <Divider />
 
-          {toggle === "conference" ? (
-            <ToggleButton
-              active
-              value="conference"
-              onClick={() => setToggle("conference")}
-            >
-              CONFERENCE
-            </ToggleButton>
-          ) : (
-            <ToggleButton
-              value="conference"
-              onClick={() => setToggle("conference")}
-            >
-              CONFERENCE
-            </ToggleButton>
-          )}
-        </ToggleButtonGroup>
+            {toggle === "conference" ? (
+              <ToggleButton
+                active
+                value="conference"
+                onClick={() => setToggle("conference")}
+              >
+                CONFERENCE
+              </ToggleButton>
+            ) : (
+              <ToggleButton
+                value="conference"
+                onClick={() => setToggle("conference")}
+              >
+                CONFERENCE
+              </ToggleButton>
+            )}
+          </ToggleButtonGroup>
 
-        <PublicationContainer>
-          {toggle === "all" &&
-            publications.map((publication) => (
-              // <ProjectCard
-              //   project={project}
-              //   openModal={openModal}
-              //   setOpenModal={setOpenModal}
-              // />
-              <>
-                <PublicationCard publication={publication} />
-                {/* <p>{publication.description}</p> */}
-              </>
-            ))}
-          {publications
-            .filter((publication) => publication.category == toggle)
-            .map((publication) => (
-              <>
-                <PublicationCard publication={publication} />
-                {/* <p>{publication.description}</p> */}
-              </>
-            ))}
-        </PublicationContainer>
-      </Wrapper>
-    </Container>
+          <PublicationContainer>
+            {toggle === "all" &&
+              publications.map((publication) => (
+                // <ProjectCard
+                //   project={project}
+                //   openModal={openModal}
+                //   setOpenModal={setOpenModal}
+                // />
+                <>
+                  <PublicationCard key={publication.id} publication={publication} />
+                </>
+              ))}
+            {publications
+              .filter((publication) => publication.category == toggle)
+              .map((publication) => (
+                <>
+                  <PublicationCard  key={publication.id} publication={publication} />
+                  {/* <p>{publication.description}</p> */}
+                </>
+              ))}
+          </PublicationContainer>
+        </Wrapper>
+      </Container>
+      <FooterSecond />
+    </>
   );
 };
 

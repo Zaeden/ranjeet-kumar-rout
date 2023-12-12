@@ -1,8 +1,4 @@
 import styled from "styled-components";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -78,22 +74,22 @@ const SocialMediaIcon = styled.a`
 const Copyright = styled.p`
   margin-top: 1.5rem;
   font-size: 0.9rem;
-  color: ${({ theme }) => theme.black};
+  color: ${({ theme }) => theme.soft2};
   text-align: center;
 `;
 
-function Footer() {
+function FooterSecond() {
   return (
     <FooterContainer>
       <FooterWrapper>
         <Logo>Ranjeet Kumar Rout</Logo>
-        <Nav>
+        {/* <Nav>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
           <NavLink href="#experience">Experience</NavLink>
-          <NavLink href="#work">My Work</NavLink>
+          <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#education">Education</NavLink>
-        </Nav>
+        </Nav> */}
         {/* <SocialMediaIcons>
           <SocialMediaIcon href={Bio.facebook} target="display">
             <FacebookIcon />
@@ -108,10 +104,12 @@ function Footer() {
             <InstagramIcon />
           </SocialMediaIcon>
         </SocialMediaIcons> */}
-        <Copyright>&copy; {new Date().getFullYear()} Ranjeet Kumar Rout. All rights reserved.</Copyright>
+        <Copyright>
+          &copy; {new Date().getFullYear()} Ranjeet Kumar Rout. All rights reserved.
+        </Copyright>
       </FooterWrapper>
     </FooterContainer>
   );
 }
 
-export default Footer;
+export default FooterSecond;
