@@ -10,7 +10,7 @@ import { AiFillProfile } from "react-icons/ai";
 import { IoLaptop } from "react-icons/io5";
 
 const Nav = styled.div`
-  background-color: ${({ theme }) => theme.card_light};
+  background-color: ${({ theme }) => theme.card};
   height: 80px;
   display: flex;
   justify-content: center;
@@ -36,7 +36,7 @@ const NavContainer = styled.div`
 `;
 
 const NavLogo = styled(LinkR)`
-  width: 80%;
+  width: 40%;
   padding: 0 6px;
   display: flex;
   justify-self: flex-start;
@@ -44,7 +44,7 @@ const NavLogo = styled(LinkR)`
   text-decoration: none;
   align-items: center;
   @media screen and (max-width: 1160px) {
-    width: 70%;
+    width: 40%;
   }
   @media screen and (max-width: 640px) {
     padding: 0 0px;
@@ -89,55 +89,88 @@ const NavLink = styled.a`
   }
 `;
 
-const ButtonContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  width: 50%;
-  height: 100%;
-  padding: 0 6px;
-  @media screen and (max-width: 1104px) {
-    width: 40%;
-  }
-  @media screen and (max-width: 960px) {
-    display: none;
-  }
+const DropdownContainer = styled.div`
+  position: relative;
+  display: inline-block;
 `;
 
-const ContactButton = styled.a`
-  background-color: transparent;
+const DropdownContent = styled.div`
+  position: absolute;
+  top: 100%;
+  /* left: 0; */
+  right: -100%;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  opacity: ${(props) => (props.isDropdownOpen ? "1" : "0")};
+  visibility: ${(props) => (props.isDropdownOpen ? "visible" : "hidden")};
+  pointer-events: ${({ isDropdownOpen }) => (isDropdownOpen ? "auto" : "none")};
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+`;
+
+const DropdownItem = styled.span`
+  color: black;
+  padding: 12px 16px;
   text-decoration: none;
-  color: ${({ theme }) => theme.primary};
-  border: 1.8px solid ${({ theme }) => theme.primary};
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 20px;
-  font-size: 1rem;
-  font-weight: 500;
+  display: block;
   cursor: pointer;
-  height: 70%;
+
   &:hover {
-    background-color: ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.white};
-  }
-  @media screen and (max-width: 800px) {
-    display: none;
-    height: 80px;
-  }
-  @media screen and (max-width: 640px) {
-    font-size: 0.8rem;
-    height: 80px;
+    background-color: #f1f1f1;
   }
 `;
 
-const MobileContactButton = styled.a`
-  background: ${({ theme }) => theme.primary};
-  border: 1.8px solid ${({ theme }) => theme.primary};
-  border-radius: 20px;
-  text-decoration: none;
-`;
+// const ButtonContainer = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: end;
+//   width: 50%;
+//   height: 100%;
+//   padding: 0 6px;
+
+//   @media screen and (max-width: 1104px) {
+//     width: 40%;
+//   }
+//   @media screen and (max-width: 960px) {
+//     display: none;
+//   }
+// `;
+
+// const ContactButton = styled.a`
+//   background-color: transparent;
+//   text-decoration: none;
+//   color: ${({ theme }) => theme.primary};
+//   border: 1.8px solid ${({ theme }) => theme.primary};
+//   border-radius: 20px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 0px 20px;
+//   font-size: 1rem;
+//   font-weight: 500;
+//   cursor: pointer;
+//   height: 70%;
+//   &:hover {
+//     background-color: ${({ theme }) => theme.primary};
+//     color: ${({ theme }) => theme.white};
+//   }
+//   @media screen and (max-width: 800px) {
+//     display: none;
+//     height: 80px;
+//   }
+//   @media screen and (max-width: 640px) {
+//     font-size: 0.8rem;
+//     height: 80px;
+//   }
+// `;
+
+// const MobileContactButton = styled.a`
+//   background: ${({ theme }) => theme.primary};
+//   border: 1.8px solid ${({ theme }) => theme.primary};
+//   border-radius: 20px;
+//   text-decoration: none;
+// `;
 
 const Span = styled.span`
   padding: 0 4px;
@@ -158,6 +191,7 @@ const MobileMenu = styled.div`
   padding: 12px 40px 24px 40px;
   background: ${({ theme }) => theme.card_light + 99};
   background: ${({ theme }) => theme.card_light};
+  background: ${({ theme }) => theme.card};
   transition: all 0.6s ease-in-out;
   transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   border-radius: 0 0 20px 20px;
@@ -204,7 +238,7 @@ const MobileMenuButton = styled.a`
 
 const MobileLink = styled.a`
   // border: 1px solid black;
-  border-bottom: 1px solid ${({ theme }) => theme.card};
+  border-bottom: 1px solid ${({ theme }) => theme.primary};
   padding-bottom: 14px;
   display: flex;
   align-items: center;
@@ -225,6 +259,12 @@ const MobileLink = styled.a`
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   return (
     <Nav>
@@ -250,15 +290,70 @@ const Navbar = () => {
           />
         </MobileIcon>
         <NavItems>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#experience">Experience</NavLink>
-          <NavLink href="#work">My Work</NavLink>
-          <NavLink href="#education">Education</NavLink>
+          <NavLink href="#">
+            <LinkR to="/" style={{ textDecoration: "none", color: "#004c4c" }}>
+              About
+            </LinkR>
+          </NavLink>
+          <NavLink href="#">
+            <LinkR
+              to="/publications"
+              style={{ textDecoration: "none", color: "#004c4c" }}
+            >
+              Publications
+            </LinkR>
+          </NavLink>
+
+          <NavLink href="#">
+            <LinkR
+              to="/books"
+              style={{ textDecoration: "none", color: "#004c4c" }}
+            >
+              Books
+            </LinkR>
+          </NavLink>
+
+          <NavLink href="#">
+            <LinkR
+              to="/patents"
+              style={{ textDecoration: "none", color: "#004c4c" }}
+            >
+              Patents
+            </LinkR>
+          </NavLink>
+
+          <NavLink href="#">
+            <LinkR
+              to="/seminars-workshops"
+              style={{ textDecoration: "none", color: "#004c4c" }}
+            >
+              Seminars & Workshops
+            </LinkR>
+          </NavLink>
+
+          <NavLink>
+            <DropdownContainer onClick={handleToggle}>
+              More &#9660;
+              <DropdownContent isDropdownOpen={isDropdownOpen}>
+                <DropdownItem>
+                  <NavLink href="#">
+                    <LinkR
+                      to="/research-students"
+                      style={{ textDecoration: "none", color: "#004c4c" }}
+                    >
+                      Research Students
+                    </LinkR>
+                  </NavLink>
+                </DropdownItem>
+                <DropdownItem>Item 2</DropdownItem>
+                <DropdownItem>Item 3</DropdownItem>
+              </DropdownContent>
+            </DropdownContainer>
+          </NavLink>
         </NavItems>
-        <ButtonContainer>
+        {/* <ButtonContainer>
           <ContactButton href="#contact">Contact Me</ContactButton>
-        </ButtonContainer>
+        </ButtonContainer> */}
       </NavContainer>
       {open && (
         <MobileMenu open={open}>
@@ -268,9 +363,9 @@ const Navbar = () => {
               setOpen(!open);
             }}
           >
-            <IoMdInformationCircle /> About
+            About
           </MobileLink>
-          <MobileLink
+          {/* <MobileLink
             href="#skills"
             onClick={() => {
               setOpen(!open);
@@ -301,11 +396,68 @@ const Navbar = () => {
             }}
           >
             <FaSchool /> Education
+          </MobileLink> */}
+
+          <MobileLink
+            href="#"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            <LinkR
+              to="/publications"
+              style={{ textDecoration: "none", color: "#004c4c" }}
+            >
+              Publications
+            </LinkR>
           </MobileLink>
-          <MobileContactButton
+
+          <MobileLink
+            href="#"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            <LinkR
+              to="/books"
+              style={{ textDecoration: "none", color: "#004c4c" }}
+            >
+              Books
+            </LinkR>
+          </MobileLink>
+
+          <MobileLink
+            href="#"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            <LinkR
+              to="/patents"
+              style={{ textDecoration: "none", color: "#004c4c" }}
+            >
+              Patents
+            </LinkR>
+          </MobileLink>
+
+          <MobileLink
+            href="#"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            <LinkR
+              to="/seminars-workshops"
+              style={{ textDecoration: "none", color: "#004c4c" }}
+            >
+              Seminars & Workshops
+            </LinkR>
+          </MobileLink>
+
+          {/* <MobileContactButton
             style={{
               padding: "10px 16px",
-              background: `${({theme}) => theme.primary}`,
+              background: `${({ theme }) => theme.primary}`,
               color: "white",
               width: "max-content",
             }}
@@ -315,7 +467,7 @@ const Navbar = () => {
             }}
           >
             Contact Me
-          </MobileContactButton>
+          </MobileContactButton> */}
         </MobileMenu>
       )}
     </Nav>

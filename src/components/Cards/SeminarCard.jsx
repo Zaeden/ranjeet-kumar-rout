@@ -25,7 +25,7 @@ const Card = styled.div`
     width: 90%;
   }
 
-  border: 0.1px solid ${({ theme }) => theme.primary};
+  border: 0.1px solid ${({ theme }) => theme.text_primary};
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 `;
 
@@ -38,7 +38,7 @@ const Top = styled.div`
 const Logo = styled.div`
   height: 50px;
   width: 50px;
-  background-color: ${({theme})  => theme.primary + 50};
+  background-color: ${({ theme }) => theme.primary + 50};
   border-radius: 10px;
   margin-top: 4px;
   font-size: 40px;
@@ -48,7 +48,6 @@ const Logo = styled.div`
     height: 40px;
     width: 40px;
     line-height: 40px;
-
   }
 `;
 
@@ -58,7 +57,7 @@ const Body = styled.div`
   flex-direction: column;
 `;
 
-const PatentTitle = styled.div`
+const SeminarTitle = styled.div`
   font-size: 18px;
   font-weight: 600;
   font-style: italic;
@@ -68,38 +67,17 @@ const PatentTitle = styled.div`
   }
 `;
 
-const Author = styled.div`
-  font-size: 14px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.text_secondary};
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
-
-const ApplicationNumber = styled.div`
-  font-size: 12px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary + 150};
-  @media only screen and (max-width: 768px) {
-    font-size: 10px;
-  }
-`;
-
-const PatentCard = ({ patentDetail }) => {
-  console.log(patentDetail);
+const SeminarCard = ({ seminarDetail }) => {
   return (
     <Card>
       <Top>
-        <Logo>{patentDetail.title[0]}</Logo>
+        <Logo>{seminarDetail.id+1}</Logo>
         <Body>
-          <PatentTitle>"{patentDetail.title}"</PatentTitle>
-          <Author>{patentDetail.author}</Author>
-          <ApplicationNumber>Application No. : {patentDetail.application_no}</ApplicationNumber>
+          <SeminarTitle>"{seminarDetail.title}"</SeminarTitle>
         </Body>
       </Top>
     </Card>
   );
 };
 
-export default PatentCard;
+export default SeminarCard;

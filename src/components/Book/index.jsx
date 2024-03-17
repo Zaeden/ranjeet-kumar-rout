@@ -4,8 +4,8 @@ import { books } from "../../data/constants.js";
 import BookCard from "../Cards/BookCard.jsx";
 import { FaCircleArrowLeft } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import NavbarSecond from "../NavbarSecond/index.jsx";
-import FooterSecond from "../FooterSecond/index.jsx";
+import Navbar from "../Navbar/index.jsx";
+import Footer from "../Footer/index.jsx";
 
 const Container = styled.div`
   display: flex;
@@ -18,16 +18,6 @@ const Container = styled.div`
   // margin-top: 100px;
   margin: 10px 0;
   padding: 8px;
-  background: linear-gradient(
-      38.73deg,
-      rgba(204, 0, 187, 0.15) 0%,
-      rgba(201, 32, 184, 0) 50%
-    ),
-    linear-gradient(
-      141.27deg,
-      rgba(0, 70, 209, 0) 50%,
-      rgba(0, 70, 209, 0.15) 100%
-    );
   @media screen and (max-width: 760px) {
     margin: 10px 0;
   }
@@ -56,7 +46,7 @@ const BackButton = styled.button`
     color: ${({ theme }) => theme.white};
   }
   
-  media screen and (max-width: 640px) {
+  @media screen and (max-width: 640px) {
     font-size: 0.8rem;
   }
 `;
@@ -77,7 +67,7 @@ const Wrapper = styled.div`
   align-items: space-between;
   width: 100%;
   gap: 12px;
-  border: 0.1px solid #854ce6;
+  border: 0.1px solid ${({ theme }) => theme.primary};
   box-shadow: 0px 4px 24px rgba(23, 92, 230, 0.15);
   border-radius: 12px;
   padding: 16px;
@@ -121,7 +111,7 @@ const BooksContainer = styled.div`
 const Book = () => {
   return (
     <>
-      <NavbarSecond />
+      <Navbar />
       <Container id="books">
         <Wrapper>
           <Link to="/">
@@ -139,7 +129,7 @@ const Book = () => {
           </BooksContainer>
         </Wrapper>
       </Container>
-      <FooterSecond />
+      <Footer />
     </>
   );
 };

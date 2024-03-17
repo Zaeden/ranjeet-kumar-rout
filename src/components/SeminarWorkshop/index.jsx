@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { patents } from "../../data/constants.js";
-import PatentCard from "../Cards/PatentCard.jsx";
+import { seminars } from "../../data/constants.js";
+import SeminarCard from "../Cards/SeminarCard.jsx";
 import { FaCircleArrowLeft } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/index.jsx";
@@ -67,7 +67,7 @@ const Wrapper = styled.div`
   align-items: space-between;
   width: 100%;
   gap: 12px;
-  border: 0.1px solid ${({ theme }) => theme.primary};
+  border: 0.1px solid ;
   box-shadow: 0px 4px 24px rgba(23, 92, 230, 0.15);
   border-radius: 12px;
   padding: 16px;
@@ -79,6 +79,7 @@ const Title = styled.h1`
   font-weight: 600;
   text-align: center;
   margin-top: 12px;
+  color: ${({ theme }) => theme.text_primary};
 
   @media (max-width: 760px) {
     margin-top: 50px;
@@ -97,7 +98,7 @@ const Desc = styled.div`
   }
 `;
 
-const PatentsContainer = styled.div`
+const SeminarContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,7 +108,7 @@ const PatentsContainer = styled.div`
   margin-top: 20px;
 `;
 
-const Patent = () => {
+const SeminarWorkshop = () => {
   return (
     <>
       <Navbar />
@@ -119,13 +120,13 @@ const Patent = () => {
               <Span>Back to Home</Span>
             </BackButton>
           </Link>
-          <Title>Patents</Title>
-          <Desc>Highlighting Patents That Define My Research Journey</Desc>
-          <PatentsContainer>
-            {patents.map((patent) => {
-              return <PatentCard key={patent.id} patentDetail={patent} />;
+          <Title>Seminar and Workshops</Title>
+          <Desc>Engaging Seminars for Knowledge Exchange</Desc>
+          <SeminarContainer>
+            {seminars.map((seminar) => {
+              return <SeminarCard key={seminar.id} seminarDetail={seminar} />;
             })}
-          </PatentsContainer>
+          </SeminarContainer>
         </Wrapper>
       </Container>
       <Footer />
@@ -133,4 +134,4 @@ const Patent = () => {
   );
 };
 
-export default Patent;
+export default SeminarWorkshop;

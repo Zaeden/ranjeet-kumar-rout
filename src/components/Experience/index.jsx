@@ -85,9 +85,9 @@ const Experience = () => {
             {experiences.map((experience, index) => (
               <TimelineItem>
                 <TimelineSeparator>
-                  <TimelineDot variant="outlined" color="secondary" />
+                  <TimelineDot variant="outlined" style={{ border: "2px solid #004c4c" }} />
                   {index !== experiences.length && (
-                    <TimelineConnector style={{ background: "#854CE6" }} />
+                    <TimelineConnector style={{ background: "#008080" }} />
                   )}
                 </TimelineSeparator>
                 <TimelineContent sx={{ py: "12px", px: 2 }}>

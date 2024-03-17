@@ -3,11 +3,11 @@ import styled from "styled-components";
 import Typewriter from "typewriter-effect";
 import HeroImg from "../../assets/images/hero-image.png";
 import HeroBgAnimation from "../HeroBgAnimation";
-import {info} from "../../data/constants.js";
+import { info } from "../../data/constants.js";
 import ranjeetcv from "../../assets/pdfs/CV_Ranjeet.pdf";
 
 const HeroContainer = styled.div`
-  background-color: ${({ theme }) => theme.card_light};
+  background-color: ${({ theme }) => theme.bg};
   display: flex;
   justify-content: center;
   position: relative;
@@ -59,6 +59,7 @@ const HeroInnerContainer = styled.div`
 `;
 
 const HeroLeftContainer = styled.div`
+  /* border: 1px solid black; */
   width: 100%;
   order: 1;
   @media screen and (max-width: 960px) {
@@ -79,11 +80,17 @@ const HeroLeftContainer = styled.div`
 `;
 
 const HeroRightContainer = styled.div`
-  width: 100%;
+  align-self: flex-start;
+  /* border: 1px solid black; */
+  width: 70%;
   order: 2;
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+  /* justify-content: end; */
+  align-items: center;
   gap: 12px;
+  margin-left: auto;
+  margin-right: auto;
   @media screen and (max-width: 960px) {
     order: 1;
     margin-bottom: 80px;
@@ -114,34 +121,35 @@ const Title = styled.div`
   }
 `;
 
-const TextLoop = styled.div`
-  font-size: 32px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
-  line-height: 68px;
-  gap: 12px;
-  display: flex;
+// const TextLoop = styled.div`
+//   font-size: 32px;
+//   font-weight: 600;
+//   color: ${({ theme }) => theme.text_primary};
+//   line-height: 68px;
+//   gap: 12px;
+//   display: flex;
 
-  @media screen and (max-width: 960px) {
-    text-align: center;
-  }
+//   @media screen and (max-width: 960px) {
+//     text-align: center;
+//   }
 
-  @media screen and (max-width: 640px) {
-    font-size: 22px;
-    line-height: 48px;
-    margin-bottom: 16px;
-  }
-`;
+//   @media screen and (max-width: 640px) {
+//     font-size: 22px;
+//     line-height: 48px;
+//     margin-bottom: 16px;
+//   }
+// `;
 
 const Span = styled.span`
-  color: ${({theme}) => theme.primary};
+  color: ${({ theme }) => theme.primary};
   cursor: pointer;
 `;
 
 const SubTitle = styled.div`
   font-size: 15px;
   font-weight: 500;
-  color: ${({ theme }) => theme.black + 95};
+  /* color: ${({ theme }) => theme.black + 95}; */
+  color: ${({ theme }) => theme.text_secondary};
   line-height: 32px;
   margin-bottom: 42px;
 
@@ -188,7 +196,7 @@ const ResumeButton = styled.a`
   );
   box-shadow: 20px 20px 60px #1f2634;
 
-  &hover: {
+  &:hover {
     transform: scale(1.05);
     transition: all 0.4s ease-in-out;
     box-shadow: 20px 20px 60px #1f2634;
@@ -205,12 +213,13 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   position: relative;
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  /* border-radius: 0 30px 0 0; */
   max-height: 400px;
   max-width: 400px;
   object-fit: cover;
   object-position: center;
-  border: 2px solid ${({ theme }) => theme.primary};
+  /* border: 2px solid ${({ theme }) => theme.primary}; */
 
   @media screen and (max-width: 960px) {
     max-height: 400px;
@@ -218,6 +227,19 @@ const Image = styled.img`
   @media screen and (max-width: 640px) {
     max-height: 280px;
     max-width: 280px;
+  }
+`;
+
+const Interest = styled.div`
+  margin-top: 50px;
+  color: ${({ theme }) => theme.primary};
+`;
+
+const InterestList = styled.ul``;
+
+const InterestListItem = styled.li`
+  &::marker {
+    color: ${({ theme }) => theme.primary};
   }
 `;
 
@@ -234,7 +256,7 @@ const Hero = () => {
               Hi, I am <br />
               Ranjeet Kumar Rout
             </Title>
-            <TextLoop>
+            {/* <TextLoop>
               I am a
               <Span>
                 <Typewriter
@@ -245,16 +267,30 @@ const Hero = () => {
                   }}
                 />
               </Span>
-            </TextLoop>
-            <SubTitle>
-              {info.bio}
-            </SubTitle>
-            <ResumeButton href={ranjeetcv} target="_blank">
+            </TextLoop> */}
+            <SubTitle>{info.bio}</SubTitle>
+            {/* <ResumeButton href={ranjeetcv} target="_blank">
               Check Resume
-            </ResumeButton>
+            </ResumeButton> */}
           </HeroLeftContainer>
           <HeroRightContainer>
             <Image src={HeroImg} alt="hero-image" />
+            <Interest>
+              <h1 style={{ textAlign: "center", color: "#004c4c" }}>
+                Research Interest
+              </h1>
+              <InterestList style={{ paddingLeft: "40px", color: "#008080" }}>
+                <InterestListItem>Biometrics</InterestListItem>
+                <InterestListItem>Affective computing</InterestListItem>
+                <InterestListItem>
+                  Emotion Recognition using Explanable Artificial Intelligence
+                  (xAI)
+                </InterestListItem>
+                <InterestListItem>Machine Learning</InterestListItem>
+                <InterestListItem>Deep Learning</InterestListItem>
+                <InterestListItem>Cyber-Physical Systems</InterestListItem>
+              </InterestList>
+            </Interest>
           </HeroRightContainer>
         </HeroInnerContainer>
       </HeroContainer>

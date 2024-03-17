@@ -16,10 +16,11 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
-  padding: 0px 0px 120px 0px;
+  /* padding: 0px 0px 120px 0px; */
+  padding: 0px 0px 10px 0px;
   @media (max-width: 960px) {
     padding: 0px;
-    padding-bottom: 120px;
+    /* padding-bottom: 40px; */
   }
 `;
 
@@ -80,9 +81,7 @@ const Education = () => {
     <Container id="education">
       <Wrapper>
         <Title>Education</Title>
-        <Desc>
-        Unveiling My Journey in Pursuit of Knowledge and Growth.
-        </Desc>
+        <Desc>Unveiling My Journey in Pursuit of Knowledge and Growth.</Desc>
         <TimelineSection>
           <Timeline>
             {education.map((education, index) => (
@@ -91,9 +90,12 @@ const Education = () => {
                   <EducationCard education={education} />
                 </TimelineContent>
                 <TimelineSeparator>
-                  <TimelineDot variant="outlined" color="secondary" />
+                  <TimelineDot
+                    variant="outlined"
+                    style={{ border: "2px solid #004c4c" }}
+                  />
                   {index !== experiences.length && (
-                    <TimelineConnector style={{ background: "#854CE6" }} />
+                    <TimelineConnector style={{ background: "#008080" }} />
                   )}
                 </TimelineSeparator>
               </TimelineItem>

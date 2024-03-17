@@ -87,13 +87,13 @@ function Footer() {
     <FooterContainer>
       <FooterWrapper>
         <Logo>Ranjeet Kumar Rout</Logo>
-        <Nav>
+        {/* <Nav>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
           <NavLink href="#experience">Experience</NavLink>
           <NavLink href="#work">My Work</NavLink>
           <NavLink href="#education">Education</NavLink>
-        </Nav>
+        </Nav> */}
         {/* <SocialMediaIcons>
           <SocialMediaIcon href={Bio.facebook} target="display">
             <FacebookIcon />

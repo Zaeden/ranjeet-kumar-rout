@@ -34,9 +34,11 @@ const Span = styled.span`
 `;
 
 const Card = styled.div`
+  border: 10px solid red;
   width: 650px;
   border-radius: 10px;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  /* box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px; */
+  box-shadow: #175ce626 0px 4px 24px;
   padding: 12px 16px;
   justify-content: space-between;
   position: relative;
@@ -47,7 +49,7 @@ const Card = styled.div`
   transition: all 0.3s ease-in-out;
   &:hover {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
   }
   @media only screen and (max-width: 768px) {
     padding: 10px;
@@ -63,7 +65,7 @@ const Card = styled.div`
     overflow: visible;
     -webkit-line-clamp: unset;
   }
-  border: 0.1px solid #854ce6;
+  border: 0.1px solid ${({ theme }) => theme.primary};
 `;
 
 const Top = styled.div`
@@ -91,7 +93,8 @@ const Body = styled.div`
 const Name = styled.div`
   font-size: 18px;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_primary + 99};
+  /* color: ${({ theme }) => theme.text_primary + 99}; */
+  color: ${({ theme }) => theme.text_primary};
   @media only screen and (max-width: 768px) {
     font-size: 14px;
   }
@@ -100,7 +103,7 @@ const Name = styled.div`
 const Degree = styled.div`
   font-size: 14px;
   font-weight: 500;
-  color: ${({ theme }) => theme.text_secondary + 99};
+  color: ${({ theme }) => theme.text_secondary};
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
@@ -109,20 +112,20 @@ const Degree = styled.div`
 const Date = styled.div`
   font-size: 12px;
   font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary + 80};
+  color: ${({ theme }) => theme.text_secondary};
   @media only screen and (max-width: 768px) {
     font-size: 10px;
   }
 `;
 
-const Grade = styled.div`
-  font-size: 14px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.text_secondary + 99};
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
+// const Grade = styled.div`
+//   font-size: 14px;
+//   font-weight: 500;
+//   color: ${({ theme }) => theme.text_secondary + 99};
+//   @media only screen and (max-width: 768px) {
+//     font-size: 12px;
+//   }
+// `;
 
 const EducationCard = ({ education }) => {
   return (

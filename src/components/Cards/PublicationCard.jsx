@@ -27,9 +27,8 @@ const Card = styled.div`
   gap: 14px;
   transition: all 0.5s ease-in-out;
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-1px);
     box-shadow: rgba(23, 92, 230, 0.4) 0px 4px 24px;
-    filter: brightness(1.1);
   }
   &:hover ${Button} {
     display: block;
@@ -54,7 +53,7 @@ const Details = styled.div`
 const Title = styled.div`
   font-size: 20px;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
+  color: ${({ theme }) => theme.primary};
   overflow: hidden;
   display: -webkit-box;
   max-width: 100%;
@@ -85,7 +84,7 @@ const Logo = styled.div`
 
 const Description = styled.div`
   font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary};
+  color: ${({ theme }) => theme.primary};
   overflow: hidden;
   margin-top: 8px;
   display: -webkit-box;

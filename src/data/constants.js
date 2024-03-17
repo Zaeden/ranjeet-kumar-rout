@@ -4,7 +4,7 @@ import latex from "../assets/images/LaTeX.png";
 import ComputationalBiology from "../assets/images/ComputationalBiology.jpg";
 
 export const info = {
-  bio: "I am working as an Assistant Professor at NIT, Srinagar. My research interests includes System Biology (Interaction Graph, Boolean Network), Computational Biology (Tertiary Protein Structure Comparison)",
+  bio: "Working as an Assistant Professor in the Department of Computer Science and Engineering, National Institute of Technology Srinagar, J&K, India. I have done Ph.D in the area of theoretical computer science from the Indian Institute of Engineering Science and Technology (IIEST), Shibpur, West Bengal, India. Prior to working at NIT Srinagar, I had some useful research and teaching experience at NIT Jalandhar, and Indian Statistical Institute (ISI) Kolkata, India. My interested research areas include machine learning, deep learning, visual cryptography ,and computational biology. I have published several papers in peer-reviewed international and scientific journals in the field of non-linear Boolean functions and computational biology and machine learning.",
 };
 
 export const skills = [
@@ -593,3 +593,75 @@ export const patents = [
     application_no: 18096206
   },
 ];
+
+
+export const seminars = [
+  {
+    id: 0,
+    category: "seminar",
+    title: "Guest Speaker on Machine Learning organized by dept. of CSE ITS Engineering college ,Greater Noida on February 22-26,2021",
+  },
+  {
+    id: 1,
+    category: "seminar",
+    title: "Coordinator in Applications of Machine Learning and Deep Learning in Engineering Applications organized  by dept. of CSE ,NIT Srinagar on October 26-30 ,2020",
+  },
+  {
+    id: 2,
+    category: "seminar",
+    title: "Jt. Organizing Secretary in the International Conference  on Digital Democracy -IT for Change  on 16-18 January ,2020 at KIIT Bhubaneshwar ,organized by the Computer Society of India",
+  },
+  {
+    id: 3,
+    category: "seminar",
+    title: "Organizing secretary in 8th international Symposium on Fusion of Science &Technology (ISFT-2020) at J.C.Bose University of Science &Technology ,YMCA, Faridabad ,India on January 6-10.2020",
+  },
+  {
+    id: 4,
+    category: "seminar",
+    title: "Coordinator in Exordium 2019, The Second National level workshop Cum Coding festival organized by semicolon and dept. of Computer CSE , NIT Srinagar from 3-7 April 2019",
+  },
+  {
+    id: 5,
+    category: "seminar",
+    title: "Organized one day coding competition Techno Crackers :lets Codify dept. of CSE NIT Srinagar on May 13 2017",
+  },
+];
+
+export const researchStudents = [
+  {
+    id:0,
+    name: "Venkata Mahalakshmi",
+    researchArea: "Machine Learning, E-HealthCare",
+    rollNumber: "2019PHSCSE005",
+    imageSrc: "student1.jpg",
+  },
+  {
+    id:1,
+    name: "Amardeep Gupta",
+    researchArea: "Machine Learning, Harvesting in WSN",
+    rollNumber: "2019PHSCSE006",
+    imageSrc: "student1.jpg",
+  },
+  {
+    id:2,
+    name: "Nazir Shabbir",
+    researchArea: "Machine Learning, Object Detection",
+    rollNumber: "2019PHACSE008",
+    imageSrc: "student1.jpg",
+  },
+  {
+    id:3,
+    name: "Irfan Rashid Pukhta",
+    researchArea: "Machine Learning, Classification, Detection",
+    rollNumber: "2019PHACSE012",
+    imageSrc: "student1.jpg",
+  },
+  {
+    id:4,
+    name: "Monika Khandelwal",
+    researchArea: "Artificial Intelligence/Machine Learning, Learning in Computational Biology",
+    rollNumber: "2019PHACSE012",
+    imageSrc: "student1.jpg",
+  },
+]

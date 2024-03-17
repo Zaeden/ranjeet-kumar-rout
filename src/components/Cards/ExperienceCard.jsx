@@ -55,7 +55,7 @@ const Card = styled.div`
     -webkit-line-clamp: unset;
   }
 
-  border: 0.1px solid #306ee8;
+  border: 0.1px solid ${({ theme }) => theme.primary};
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 `;
 
@@ -84,7 +84,7 @@ const Body = styled.div`
 const Role = styled.div`
   font-size: 18px;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_primary + 99};
+  color: ${({ theme }) => theme.text_primary};
   @media only screen and (max-width: 768px) {
     font-size: 14px;
   }
@@ -93,7 +93,7 @@ const Role = styled.div`
 const Company = styled.div`
   font-size: 14px;
   font-weight: 500;
-  color: ${({ theme }) => theme.text_secondary + 99};
+  color: ${({ theme }) => theme.text_secondary};
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
@@ -102,7 +102,7 @@ const Company = styled.div`
 const Date = styled.div`
   font-size: 12px;
   font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary + 80};
+  color: ${({ theme }) => theme.text_secondary};
   @media only screen and (max-width: 768px) {
     font-size: 10px;
   }
@@ -112,7 +112,7 @@ const Description = styled.div`
   width: 100%;
   font-size: 15px;
   font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 99};
+  color: ${({ theme }) => theme.text_primary};
   margin-bottom: 10px;
   @media only screen and (max-width: 768px) {
     font-size: 12px;
@@ -135,7 +135,7 @@ const ItemWrapper = styled.div`
 const Skill = styled.div`
   font-size: 15px;
   font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 99};
+  color: ${({ theme }) => theme.text_primary};
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
