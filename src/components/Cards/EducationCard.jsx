@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { FaGraduationCap } from "react-icons/fa6";
 
 const Document = styled.img`
   display: none;
@@ -34,11 +35,10 @@ const Span = styled.span`
 `;
 
 const Card = styled.div`
-  border: 10px solid red;
+  /* border: 10px solid red; */
   width: 650px;
   border-radius: 4px;
-  /* box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px; */
-  box-shadow: #175ce626 0px 4px 24px;
+  box-shadow: 0px 0px 24px #dddddd;
   padding: 12px 16px;
   justify-content: space-between;
   position: relative;
@@ -47,10 +47,6 @@ const Card = styled.div`
   flex-direction: column;
   gap: 12px;
   transition: all 0.3s ease-in-out;
-  &:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-    /* transform: translateY(-5px); */
-  }
   @media only screen and (max-width: 768px) {
     padding: 10px;
     gap: 8px;
@@ -90,28 +86,26 @@ const Body = styled.div`
   flex-direction: column;
 `;
 
-const Name = styled.div`
+const Degree = styled.div`
   font-size: 15px;
   /* font-size: 18px; */
-  font-weight: 600;
+  font-weight: 500;
   /* color: ${({ theme }) => theme.text_primary + 99}; */
-  color: ${({ theme }) => theme.text_primary};
   @media only screen and (max-width: 768px) {
     font-size: 14px;
   }
 `;
-
-const Degree = styled.div`
+const Name = styled.div`
   /* font-size: 14px; */
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
   color: ${({ theme }) => theme.text_secondary};
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
 `;
 
-const Date = styled.div`
+const Date = styled.span`
   font-size: 12px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_secondary};
@@ -120,33 +114,19 @@ const Date = styled.div`
   }
 `;
 
-// const Grade = styled.div`
-//   font-size: 14px;
-//   font-weight: 500;
-//   color: ${({ theme }) => theme.text_secondary + 99};
-//   @media only screen and (max-width: 768px) {
-//     font-size: 12px;
-//   }
-// `;
-
 const EducationCard = ({ education }) => {
   return (
     <Card>
       <Top>
-        <Image src={education.img} />
+        {/* <Image src={education.img} /> */}
+        <FaGraduationCap style={{ fontSize: "40px" }} />
         <Body>
+          <Degree>
+            {education.degree}, {education.date}
+          </Degree>
           <Name>{education.school}</Name>
-          <Degree>{education.degree}</Degree>
-          <Date>{education.date}</Date>
         </Body>
       </Top>
-      {/* <Grade>
-        <b>Grade: </b>
-        {education.grade}
-      </Grade> */}
-      {/* <Description>
-        <Span>{education.desc}</Span>
-      </Description> */}
     </Card>
   );
 };

@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 42px;
+  font-size: 35px;
   font-weight: 300;
   text-align: center;
   margin-top: 12px;
@@ -71,7 +71,7 @@ const Skill = styled.div`
   justify-content: flex-start;
   align-items: center;
   gap: 18px;
-  box-shadow: 0px 4px 24px #dddddd;
+  box-shadow: 0px 0px 24px #dddddd;
 
   @media (max-width: 768px) {
     max-width: 400px;
@@ -92,37 +92,6 @@ const SkillTitle = styled.h2`
   text-align: center;
   // border: 1px solid black;
 `;
-
-// const SkillList = styled.ul`
-//   display: flex;
-//   justify-content: center;
-//   flex-wrap: wrap;
-//   gap: 12px;
-//   margin-bottom: 20px;
-// `;
-
-// const SkillItem = styled.div`
-//   display: flex;
-//   align-items: center;
-//   gap: 8px;
-//   justify-content: center;
-//   font-size: 16px;
-//   color: ${({ theme }) => theme.text_primary + 80};
-//   border-radius: 12px;
-//   border: 1px solid ${({ theme }) => theme.text_primary + 80};
-//   padding: 12px 16px;
-//   font-weight: 400;
-
-//   @media (max-width: 768px) {
-//     font-size: 14px;
-//     padding: 8px 12px;
-//   }
-
-//   @media (max-width: 500px) {
-//     font-size: 14px;
-//     padding: 6px 12px;
-//   }
-// `;
 
 const SkillLogo = styled.img`
   height: 50px;

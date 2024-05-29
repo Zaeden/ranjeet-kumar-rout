@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import HeroImg from "../../assets/images/hero-image.png";
+import HeroImg from "../../assets/images/ranjeet kumar rout profile pic.png";
 import { info } from "../../data/constants.js";
 import ranjeetcv from "../../assets/pdfs/CV_Ranjeet.pdf";
 import Education from "../Education/index.jsx";
 import Skills from "../Skills/index.jsx";
 import Experience from "../Experience/index.jsx";
 
+import { BiSolidChevronRightCircle } from "react-icons/bi";
+import { FaGraduationCap } from "react-icons/fa6";
 import { SiGooglescholar } from "react-icons/si";
 import { FaResearchgate } from "react-icons/fa6";
 
@@ -17,7 +19,6 @@ const HeroContainer = styled.div`
   align-items: flex-start;
   position: relative;
   padding: 80px 30px;
-
   @media screen and (max-width: 960px) {
     padding: 66px 16px;
   }
@@ -68,6 +69,7 @@ const HeroLeftContainer = styled.div`
   @media screen and (max-width: 640px) {
     order: 1;
     margin-bottom: 30px;
+    width: 100%;
   }
 `;
 
@@ -93,6 +95,22 @@ const HeroRightContainer = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+`;
+
+const ProfileCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #aaaaaa;
+  padding-top: 12px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px #dddddd;
+
+  @media screen and (max-width: 640px) {
+    width: 90%;
   }
 `;
 
@@ -163,17 +181,18 @@ const ResumeButton = styled.a`
 `;
 
 const Image = styled.img`
-  width: 50%;
-  height: 65%;
+  /* width: 50%;
+  height: 50%; */
+  height: 150px;
+  width: 180px;
   position: relative;
   border-radius: 50%;
   margin-bottom: 20px;
-  /* border-radius: 0 30px 0 0; */
   max-height: 400px;
   max-width: 400px;
-  object-fit: cover;
   object-position: center;
-  /* border: 2px solid ${({ theme }) => theme.primary}; */
+  box-shadow: 0px 0px 20px #dddddd;
+  border: 5px solid #ffffff;
 
   @media screen and (max-width: 960px) {
     max-height: 400px;
@@ -198,7 +217,17 @@ const Interest = styled.div`
   color: ${({ theme }) => theme.primary};
 `;
 
-const InterestList = styled.ul``;
+const InterestList = styled.ul`
+  padding-left: 70px;
+  margin: auto;
+  margin-top: 20px;
+  /* border: 1px solid black; */
+  list-style: none;
+
+  @media screen and (max-width: 640px) {
+    padding-left: 30px;
+  }
+`;
 
 const InterestListItem = styled.li`
   &::marker {
@@ -212,18 +241,7 @@ const Hero = () => {
       <HeroContainer>
         <HeroInnerContainer>
           <HeroLeftContainer>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                textAlign: "center",
-                border: "1px solid black",
-                paddingTop: "12px",
-                borderRadius: "8px",
-              }}
-            >
+            <ProfileCard>
               <Image src={HeroImg} alt="hero-image" />
               <PersonalInfo>
                 <h1
@@ -232,8 +250,9 @@ const Hero = () => {
                     textAlign: "center",
                     color: "#111111",
                     fontWeight: "400",
+                    margin: "auto",
                     marginBottom: "10px",
-                    borderBottom: "1px solid grey",
+                    borderBottom: "1px solid #cccccc",
                   }}
                 >
                   Ranjeet Kumar Rout
@@ -297,31 +316,44 @@ const Hero = () => {
                   </ResumeButton>
                 </ContactDetails>
               </PersonalInfo>
-            </div>
+            </ProfileCard>
           </HeroLeftContainer>
           <HeroRightContainer>
             <Title>About me</Title>
             <SubTitle>{info.bio}</SubTitle>
+
+            {/* ----------Research Interest Section----------- */}
             <Interest>
               <h1
                 style={{
                   textAlign: "center",
                   color: "#222222",
+                  fontSize: "35px",
                   fontWeight: "300",
                 }}
               >
                 Research Interest
               </h1>
-              <InterestList style={{ paddingLeft: "200px" }}>
-                <InterestListItem>Biometrics</InterestListItem>
-                <InterestListItem>Affective computing</InterestListItem>
+              <InterestList>
                 <InterestListItem>
-                  Emotion Recognition using Explanable Artificial Intelligence
-                  (xAI)
+                  <BiSolidChevronRightCircle /> Biometrics
                 </InterestListItem>
-                <InterestListItem>Machine Learning</InterestListItem>
-                <InterestListItem>Deep Learning</InterestListItem>
-                <InterestListItem>Cyber-Physical Systems</InterestListItem>
+                <InterestListItem>
+                  <BiSolidChevronRightCircle /> Affective computing
+                </InterestListItem>
+                <InterestListItem>
+                  <BiSolidChevronRightCircle /> Emotion Recognition using
+                  Explanable Artificial Intelligence (xAI)
+                </InterestListItem>
+                <InterestListItem>
+                  <BiSolidChevronRightCircle /> Machine Learning
+                </InterestListItem>
+                <InterestListItem>
+                  <BiSolidChevronRightCircle /> Deep Learning
+                </InterestListItem>
+                <InterestListItem>
+                  <BiSolidChevronRightCircle /> Cyber-Physical Systems
+                </InterestListItem>
               </InterestList>
             </Interest>
 

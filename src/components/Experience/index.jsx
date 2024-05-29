@@ -38,7 +38,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 42px;
+  font-size: 35px;
   text-align: center;
   font-weight: 300;
   margin-top: 20px;
@@ -84,7 +84,7 @@ const Experience = () => {
           <Timeline>
             {experiences.map((experience, index) => (
               <TimelineItem>
-                <TimelineSeparator>
+                {/* <TimelineSeparator>
                   <TimelineDot
                     variant="outlined"
                     style={{ border: "2px solid #333333" }}
@@ -92,7 +92,7 @@ const Experience = () => {
                   {index !== experiences.length && (
                     <TimelineConnector style={{ background: "#333333" }} />
                   )}
-                </TimelineSeparator>
+                </TimelineSeparator> */}
                 <TimelineContent sx={{ py: "12px", px: 2 }}>
                   <ExperienceCard experience={experience} />
                 </TimelineContent>

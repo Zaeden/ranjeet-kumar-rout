@@ -25,7 +25,7 @@ const Span = styled.span`
 const Card = styled.div`
   width: 650px;
   border-radius: 4px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px #dddddd;
   padding: 12px 16px;
   justify-content: space-between;
   position: relative;
@@ -35,10 +35,10 @@ const Card = styled.div`
   gap: 12px;
   transition: all 0.3s ease-in-out;
 
-  &:hover {
+  /* &:hover {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
-  }
+  } */
 
   @media only screen and (max-width: 768px) {
     padding: 10px;

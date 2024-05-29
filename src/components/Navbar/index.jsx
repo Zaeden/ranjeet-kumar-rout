@@ -62,6 +62,7 @@ const MobileIcon = styled.div`
     font-size: 1.5rem;
     cursor: pointer;
     color: ${({ theme }) => theme.text_primary};
+    color: #ffffff;
   }
 `;
 
@@ -80,7 +81,7 @@ const NavItems = styled.ul`
 
 const NavLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
-  font-weight: 300;
+  font-weight: 200;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -92,6 +93,7 @@ const NavLink = styled.a`
 const DropdownContainer = styled.div`
   position: relative;
   display: inline-block;
+  color: #ffffff;
 `;
 
 const DropdownContent = styled.div`
@@ -339,7 +341,11 @@ const Navbar = () => {
                   <NavLink href="#">
                     <LinkR
                       to="/research-students"
-                      style={{ textDecoration: "none", color: "#ffffff" }}
+                      style={{
+                        textDecoration: "none",
+                        color: "#000000",
+                        fontWeight: "400",
+                      }}
                     >
                       Research Students
                     </LinkR>
@@ -451,6 +457,19 @@ const Navbar = () => {
               style={{ textDecoration: "none", color: "#333333" }}
             >
               Seminars & Workshops
+            </LinkR>
+          </MobileLink>
+          <MobileLink
+            href="#"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            <LinkR
+              to="/research-students"
+              style={{ textDecoration: "none", color: "#333333" }}
+            >
+              Research Students
             </LinkR>
           </MobileLink>
 

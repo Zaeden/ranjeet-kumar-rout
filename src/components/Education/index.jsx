@@ -40,7 +40,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 42px;
+  font-size: 35px;
   text-align: center;
   font-weight: 300;
   margin-top: 20px;
@@ -90,7 +90,7 @@ const Education = () => {
                 <TimelineContent sx={{ py: "12px", px: 2 }}>
                   <EducationCard education={education} />
                 </TimelineContent>
-                <TimelineSeparator>
+                {/* <TimelineSeparator>
                   <TimelineDot
                     variant="outlined"
                     style={{ border: "2px solid #333333" }}
@@ -98,7 +98,7 @@ const Education = () => {
                   {index !== experiences.length && (
                     <TimelineConnector style={{ background: "#333333" }} />
                   )}
-                </TimelineSeparator>
+                </TimelineSeparator> */}
               </TimelineItem>
             ))}
           </Timeline>
