@@ -44,7 +44,7 @@ const NavLogo = styled(LinkR)`
   text-decoration: none;
   align-items: center;
   @media screen and (max-width: 1160px) {
-    width: 40%;
+    width: 80%;
   }
   @media screen and (max-width: 640px) {
     padding: 0 0px;
