@@ -10,7 +10,7 @@ import { AiFillProfile } from "react-icons/ai";
 import { IoLaptop } from "react-icons/io5";
 
 const Nav = styled.div`
-  background-color: ${({ theme }) => theme.card};
+  background-color: ${({ theme }) => theme.primary};
   height: 80px;
   display: flex;
   justify-content: center;
@@ -68,7 +68,7 @@ const MobileIcon = styled.div`
 const NavItems = styled.ul`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   gap: 32px;
   list-style: none;
@@ -80,7 +80,7 @@ const NavItems = styled.ul`
 
 const NavLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
-  font-weight: 500;
+  font-weight: 300;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -238,13 +238,13 @@ const MobileMenuButton = styled.a`
 
 const MobileLink = styled.a`
   // border: 1px solid black;
-  border-bottom: 1px solid ${({ theme }) => theme.primary};
+  border-bottom: 1px solid ${({ theme }) => theme.primary + 60};
   padding-bottom: 14px;
   display: flex;
   align-items: center;
   gap: 8px;
   color: ${({ theme }) => theme.text_primary};
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
@@ -274,7 +274,7 @@ const Navbar = () => {
             style={{
               display: "flex",
               alignItems: "center",
-              color: "black",
+              color: "white",
               cursor: "pointer",
             }}
           >
@@ -291,14 +291,14 @@ const Navbar = () => {
         </MobileIcon>
         <NavItems>
           <NavLink href="#">
-            <LinkR to="/" style={{ textDecoration: "none", color: "#004c4c" }}>
+            <LinkR to="/" style={{ textDecoration: "none", color: "#ffffff" }}>
               About
             </LinkR>
           </NavLink>
           <NavLink href="#">
             <LinkR
               to="/publications"
-              style={{ textDecoration: "none", color: "#004c4c" }}
+              style={{ textDecoration: "none", color: "#ffffff" }}
             >
               Publications
             </LinkR>
@@ -307,7 +307,7 @@ const Navbar = () => {
           <NavLink href="#">
             <LinkR
               to="/books"
-              style={{ textDecoration: "none", color: "#004c4c" }}
+              style={{ textDecoration: "none", color: "#ffffff" }}
             >
               Books
             </LinkR>
@@ -316,7 +316,7 @@ const Navbar = () => {
           <NavLink href="#">
             <LinkR
               to="/patents"
-              style={{ textDecoration: "none", color: "#004c4c" }}
+              style={{ textDecoration: "none", color: "#ffffff" }}
             >
               Patents
             </LinkR>
@@ -325,7 +325,7 @@ const Navbar = () => {
           <NavLink href="#">
             <LinkR
               to="/seminars-workshops"
-              style={{ textDecoration: "none", color: "#004c4c" }}
+              style={{ textDecoration: "none", color: "#ffffff" }}
             >
               Seminars & Workshops
             </LinkR>
@@ -339,7 +339,7 @@ const Navbar = () => {
                   <NavLink href="#">
                     <LinkR
                       to="/research-students"
-                      style={{ textDecoration: "none", color: "#004c4c" }}
+                      style={{ textDecoration: "none", color: "#ffffff" }}
                     >
                       Research Students
                     </LinkR>
@@ -406,7 +406,7 @@ const Navbar = () => {
           >
             <LinkR
               to="/publications"
-              style={{ textDecoration: "none", color: "#004c4c" }}
+              style={{ textDecoration: "none", color: "#333333" }}
             >
               Publications
             </LinkR>
@@ -420,7 +420,7 @@ const Navbar = () => {
           >
             <LinkR
               to="/books"
-              style={{ textDecoration: "none", color: "#004c4c" }}
+              style={{ textDecoration: "none", color: "#333333" }}
             >
               Books
             </LinkR>
@@ -434,7 +434,7 @@ const Navbar = () => {
           >
             <LinkR
               to="/patents"
-              style={{ textDecoration: "none", color: "#004c4c" }}
+              style={{ textDecoration: "none", color: "#333333" }}
             >
               Patents
             </LinkR>
@@ -448,7 +448,7 @@ const Navbar = () => {
           >
             <LinkR
               to="/seminars-workshops"
-              style={{ textDecoration: "none", color: "#004c4c" }}
+              style={{ textDecoration: "none", color: "#333333" }}
             >
               Seminars & Workshops
             </LinkR>

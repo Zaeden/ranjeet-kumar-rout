@@ -36,7 +36,7 @@ const Span = styled.span`
 const Card = styled.div`
   border: 10px solid red;
   width: 650px;
-  border-radius: 10px;
+  border-radius: 4px;
   /* box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px; */
   box-shadow: #175ce626 0px 4px 24px;
   padding: 12px 16px;
@@ -91,7 +91,8 @@ const Body = styled.div`
 `;
 
 const Name = styled.div`
-  font-size: 18px;
+  font-size: 15px;
+  /* font-size: 18px; */
   font-weight: 600;
   /* color: ${({ theme }) => theme.text_primary + 99}; */
   color: ${({ theme }) => theme.text_primary};
@@ -101,8 +102,9 @@ const Name = styled.div`
 `;
 
 const Degree = styled.div`
-  font-size: 14px;
-  font-weight: 500;
+  /* font-size: 14px; */
+  font-size: 12px;
+  font-weight: 600;
   color: ${({ theme }) => theme.text_secondary};
   @media only screen and (max-width: 768px) {
     font-size: 12px;

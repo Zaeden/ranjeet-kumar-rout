@@ -41,7 +41,7 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "https://media.licdn.com/dms/image/C560BAQEKD8d47ajr0A/company-logo_100_100/0/1630636736020/national_institute_of_technology_srinagar_logo?e=1709769600&v=beta&t=cUiV12YtScFJI0JM9JfI_q5gb0V05y_NMhUYYF0x0zw",
+    img: "data:image/jpeg;base64,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",
     role: "Assistant Professor",
     company: "National Institute of Technology, Srinagar",
     date: "Oct 2018 - Present",
@@ -62,7 +62,7 @@ export const experiences = [
   },
   {
     id: 1,
-    img: "https://media.licdn.com/dms/image/C560BAQHC_Tto39UPmg/company-logo_100_100/0/1631438766862?e=1709769600&v=beta&t=V9VACnK5hrsW5CKHuuwsRLNCVT2oe-HbFRNTele0ChE",
+    img: "https://upload.wikimedia.org/wikipedia/en/f/ff/Amity_University_logo.png",
     role: "Assistant Professor",
     company: "Amity University, Noida",
     date: "Aug 2017 - Oct 2018",
@@ -82,7 +82,7 @@ export const experiences = [
   },
   {
     id: 2,
-    img: "https://www.nitj.ac.in/public/assets/images/logo_250.png",
+    img: "data:image/jpeg;base64,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",
     role: "Assistant Professor",
     company: "Dr. B. R. Ambedkar National Institute of Technology, Jalandhar",
     date: "Jan 2015 - Jun 2017",
@@ -574,94 +574,103 @@ export const patents = [
   {
     id: 0,
     category: "patents",
-    title: "Implementation of facial emotion recognition system using deep neural network approaches and its application thereof",
+    title:
+      "Implementation of facial emotion recognition system using deep neural network approaches and its application thereof",
     author: "Ranjeet Kumar Rout, Saiyed Umer, and Amrit Lal Sangal",
-    application_no: 202111012711
+    application_no: 202111012711,
   },
   {
     id: 1,
     category: "patents",
-    title: "Implementation of Affine Boolean Function for 16 Queen Problem and Its Application Thereof",
-    author: "Ranjeet Kumar Rout, Saiyed Umer, Sabha Sheikh, Harveeer Singh Pali And Ratikanta Sahoo",
-    application_no: 202111035066
+    title:
+      "Implementation of Affine Boolean Function for 16 Queen Problem and Its Application Thereof",
+    author:
+      "Ranjeet Kumar Rout, Saiyed Umer, Sabha Sheikh, Harveeer Singh Pali And Ratikanta Sahoo",
+    application_no: 202111035066,
   },
   {
     id: 2,
     category: "patents",
     title: "Systems and Methods for facilitating Biometric Recognition",
     author: "A. Sardar, S. Umer, R. K. Rout and M. K. Khan",
-    application_no: 18096206
+    application_no: 18096206,
   },
 ];
-
 
 export const seminars = [
   {
     id: 0,
     category: "seminar",
-    title: "Guest Speaker on Machine Learning organized by dept. of CSE ITS Engineering college ,Greater Noida on February 22-26,2021",
+    title:
+      "Guest Speaker on Machine Learning organized by dept. of CSE ITS Engineering college ,Greater Noida on February 22-26,2021",
   },
   {
     id: 1,
     category: "seminar",
-    title: "Coordinator in Applications of Machine Learning and Deep Learning in Engineering Applications organized  by dept. of CSE ,NIT Srinagar on October 26-30 ,2020",
+    title:
+      "Coordinator in Applications of Machine Learning and Deep Learning in Engineering Applications organized  by dept. of CSE ,NIT Srinagar on October 26-30 ,2020",
   },
   {
     id: 2,
     category: "seminar",
-    title: "Jt. Organizing Secretary in the International Conference  on Digital Democracy -IT for Change  on 16-18 January ,2020 at KIIT Bhubaneshwar ,organized by the Computer Society of India",
+    title:
+      "Jt. Organizing Secretary in the International Conference  on Digital Democracy -IT for Change  on 16-18 January ,2020 at KIIT Bhubaneshwar ,organized by the Computer Society of India",
   },
   {
     id: 3,
     category: "seminar",
-    title: "Organizing secretary in 8th international Symposium on Fusion of Science &Technology (ISFT-2020) at J.C.Bose University of Science &Technology ,YMCA, Faridabad ,India on January 6-10.2020",
+    title:
+      "Organizing secretary in 8th international Symposium on Fusion of Science &Technology (ISFT-2020) at J.C.Bose University of Science &Technology ,YMCA, Faridabad ,India on January 6-10.2020",
   },
   {
     id: 4,
     category: "seminar",
-    title: "Coordinator in Exordium 2019, The Second National level workshop Cum Coding festival organized by semicolon and dept. of Computer CSE , NIT Srinagar from 3-7 April 2019",
+    title:
+      "Coordinator in Exordium 2019, The Second National level workshop Cum Coding festival organized by semicolon and dept. of Computer CSE , NIT Srinagar from 3-7 April 2019",
   },
   {
     id: 5,
     category: "seminar",
-    title: "Organized one day coding competition Techno Crackers :lets Codify dept. of CSE NIT Srinagar on May 13 2017",
+    title:
+      "Organized one day coding competition Techno Crackers :lets Codify dept. of CSE NIT Srinagar on May 13 2017",
   },
 ];
 
 export const researchStudents = [
   {
-    id:0,
+    id: 0,
     name: "Venkata Mahalakshmi",
     researchArea: "Machine Learning, E-HealthCare",
     rollNumber: "2019PHSCSE005",
     imageSrc: "student1.jpg",
   },
   {
-    id:1,
+    id: 1,
     name: "Amardeep Gupta",
     researchArea: "Machine Learning, Harvesting in WSN",
     rollNumber: "2019PHSCSE006",
     imageSrc: "student1.jpg",
   },
   {
-    id:2,
+    id: 2,
     name: "Nazir Shabbir",
     researchArea: "Machine Learning, Object Detection",
     rollNumber: "2019PHACSE008",
     imageSrc: "student1.jpg",
   },
   {
-    id:3,
+    id: 3,
     name: "Irfan Rashid Pukhta",
     researchArea: "Machine Learning, Classification, Detection",
     rollNumber: "2019PHACSE012",
     imageSrc: "student1.jpg",
   },
   {
-    id:4,
+    id: 4,
     name: "Monika Khandelwal",
-    researchArea: "Artificial Intelligence/Machine Learning, Learning in Computational Biology",
+    researchArea:
+      "Artificial Intelligence/Machine Learning, Learning in Computational Biology",
     rollNumber: "2019PHACSE012",
     imageSrc: "student1.jpg",
   },
-]
+];

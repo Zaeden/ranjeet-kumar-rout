@@ -9,8 +9,7 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
-  margin-top: 100px;
-
+  margin-top: 40px;
 `;
 
 const Wrapper = styled.div`
@@ -26,7 +25,7 @@ const Wrapper = styled.div`
 
 const Title = styled.h1`
   font-size: 42px;
-  font-weight: 600;
+  font-weight: 300;
   text-align: center;
   margin-top: 12px;
   color: ${({ theme }) => theme.text_primary};
@@ -60,16 +59,19 @@ const SkillsContainer = styled.div`
 
 const Skill = styled.div`
   width: 100%;
-  max-width: 400px;
-  height: 100px;
+  /* max-width: 400px; */
+  max-width: 300px;
+  /* height: 100px; */
+  height: 70px;
   background-color: ${({ theme }) => theme.card};
-  border: 0.1px solid #854ce6;
-  border-radius: 12px;
+  border: 0.1px solid #333333;
+  border-radius: 6px;
   padding: 18px 36px;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   gap: 18px;
-  box-shadow: 0px 4px 24px rgba(23, 92, 230, 0.15);
+  box-shadow: 0px 4px 24px #dddddd;
 
   @media (max-width: 768px) {
     max-width: 400px;
@@ -83,7 +85,8 @@ const Skill = styled.div`
 `;
 
 const SkillTitle = styled.h2`
-  font-size: 22px;
+  /* font-size: 22px; */
+  font-size: 18px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_secondary};
   text-align: center;
@@ -137,10 +140,10 @@ const Skills = () => {
     <Container id="skills">
       <Wrapper>
         <Title>Skills</Title>
-        <Desc>
+        {/* <Desc>
           Here are some of my skills on which I have been working for the past
           couple of year.
-        </Desc>
+        </Desc> */}
         <SkillsContainer>
           {skills.map((item) => {
             return (

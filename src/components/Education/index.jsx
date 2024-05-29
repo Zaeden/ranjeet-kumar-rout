@@ -42,7 +42,7 @@ const Wrapper = styled.div`
 const Title = styled.div`
   font-size: 42px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 300;
   margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
@@ -55,6 +55,7 @@ const Desc = styled.div`
   font-size: 18px;
   text-align: center;
   max-width: 600px;
+  font-weight: 300;
   color: ${({ theme }) => theme.text_secondary};
   @media (max-width: 768px) {
     margin-top: 12px;
@@ -81,7 +82,7 @@ const Education = () => {
     <Container id="education">
       <Wrapper>
         <Title>Education</Title>
-        <Desc>Unveiling My Journey in Pursuit of Knowledge and Growth.</Desc>
+        {/* <Desc>Unveiling My Journey in Pursuit of Knowledge and Growth.</Desc> */}
         <TimelineSection>
           <Timeline>
             {education.map((education, index) => (
@@ -92,10 +93,10 @@ const Education = () => {
                 <TimelineSeparator>
                   <TimelineDot
                     variant="outlined"
-                    style={{ border: "2px solid #004c4c" }}
+                    style={{ border: "2px solid #333333" }}
                   />
                   {index !== experiences.length && (
-                    <TimelineConnector style={{ background: "#008080" }} />
+                    <TimelineConnector style={{ background: "#333333" }} />
                   )}
                 </TimelineSeparator>
               </TimelineItem>

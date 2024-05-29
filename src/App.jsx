@@ -8,6 +8,7 @@ import Patent from "./components/Patent/index.jsx";
 import SeminarWorkshop from "./components/SeminarWorkshop/index.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
+// import { Home2 } from "./pages/Home2.jsx";
 import ScrollToTop from "./components/ScrollToTop/index.jsx";
 import ResearchStudent from "./components/ResearchStudent/index.jsx";
 
@@ -17,6 +18,7 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
+          {/* <Route path="/" element={<Home2 />} /> */}
           <Route path="/" element={<Home />} />
           <Route path="/publications" element={<Publication />} />
           <Route path="/books" element={<Book />} />

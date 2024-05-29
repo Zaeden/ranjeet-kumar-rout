@@ -24,7 +24,7 @@ const Span = styled.span`
 
 const Card = styled.div`
   width: 650px;
-  border-radius: 10px;
+  border-radius: 4px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 12px 16px;
   justify-content: space-between;
@@ -82,7 +82,8 @@ const Body = styled.div`
 `;
 
 const Role = styled.div`
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: 15px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
   @media only screen and (max-width: 768px) {
@@ -91,8 +92,9 @@ const Role = styled.div`
 `;
 
 const Company = styled.div`
-  font-size: 14px;
-  font-weight: 500;
+  /* font-size: 14px; */
+  font-size: 12px;
+  font-weight: 600;
   color: ${({ theme }) => theme.text_secondary};
   @media only screen and (max-width: 768px) {
     font-size: 12px;
